@@ -42,20 +42,20 @@ class EULA:
         notice += '|                 ATTENTION!!! ATTENTION!!! ATTENTION!!!                    |\n'
         notice += '|                       ' + globals.vars.appname + ' v' + globals.vars.version + '                            |\n'
         notice += '|___________________________________________________________________________|\n'
-        notice += '|This program contains live and dangerous malware files                     |\n'
+        notice += '|This program contains live and dangerous malware files.                    |\n'
         notice += '|This program is intended to be used only for malware analysis and research |\n'
-        notice += '|and by agreeing the EULA you agree to only use it for legal purposes and   |\n'
-        notice += '|studying malware.                                                          |\n'
+        notice += '|and by agreeing the EULA you agree to use it only for legal purposes and   |\n'
+        notice += '|for studying malware.                                                      |\n'
         notice += '|You understand that these file are dangerous and should only be run on VMs |\n'
         notice += '|you can control and know how to handle. Running them on a live system will |\n'
-        notice += '|infect you machines will live and dangerous malwares!.                     |\n'
+        notice += '|infect your machines with live and dangerous malwares!                     |\n'
         notice += '|___________________________________________________________________________|\n'
-        print red(notice)
+        print(red(notice))
         eula_answer = raw_input(
             'Type YES in captial letters to accept this EULA.\n > ')
         if eula_answer == 'YES':
             new = open(globals.vars.eula_file, 'a')
             new.write(eula_answer)
         else:
-            print 'You need to accept the EULA.\nExiting the program.'
+            print('You need to accept the EULA.\nExiting the program.')
             sys.exit(0)
